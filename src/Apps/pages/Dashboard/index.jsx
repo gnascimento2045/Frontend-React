@@ -22,7 +22,17 @@ export default function Dashboard() {
   }
 
   if (!user) {
-    return null;
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        fontSize: '18px'
+      }}>
+        Carregando...
+      </div>
+    );
   }
 
   return (

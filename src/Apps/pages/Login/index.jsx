@@ -18,7 +18,7 @@ export default function Login() {
     try {
       const response = await authService.login({ email, password });
       
-      authService.saveUser(response.user);
+      authService.saveUserWithToken(response);
       
       navigate("/dashboard");
     } catch (err) {
